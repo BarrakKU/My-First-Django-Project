@@ -6,8 +6,10 @@ def test_view(request):
     print(f"Request: {request}")
 
     name = "Barrak"
+    age = 20
 
-    return HttpResponse(f"""<html><body>
-  <h1>Hello {name}!</h1>
-  <p>This is my first <strong>html</strong> web app!</p>
-  </body></html>""")
+    c = {}
+    c["name"] = name
+    c["age"] = age
+
+    return render(request, "test.html", c)
