@@ -1,8 +1,27 @@
 <html><body>
     <h1>Hello {{name}}!</h1>
-    <p>This is my first <strong>html</strong> web app!</p>
+    <h2>You are {{age}} years old!</h2>
+    <p>Your major is {{major}}</p>
+    <h3>The majors available are:
 
-    <a href=https://www.theraleighregister.com/barraks-secret-files.html>My Files</a>
+    <ul>
+    {% for x in majors %}
+    
+    <li>{{x}}</li>
+    
+    {% endfor %}
+    </ul> 
+    </h3>
+    
+    <ul>
+        <li> item one</li>
+        <li> item two</li>
+    </ul>
+
+    <p>This is my first <strong>html</strong> web app!</p>
+    <div>
+    <a href=https://www.theraleighregister.com/barraks-secret-files.html>My Secret Files</a>
+    </div>
     </body></html>
 
     
