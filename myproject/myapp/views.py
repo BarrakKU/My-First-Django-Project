@@ -5,7 +5,7 @@ from django.http import HttpResponse
 def test_view(request):
     print(f"Request: {request}")
 
-    name = "Barrak"
+    name = request.GET.get("username")
     age = 20
     major = "MIS"
     majors = [
@@ -25,3 +25,4 @@ def test_view(request):
     c["majors"] = majors
 
     return render(request, "test.html", c)
+
