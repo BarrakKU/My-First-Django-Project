@@ -26,3 +26,11 @@ def test_view(request):
 
     return render(request, "test.html", c)
 
+def greet_view(request, u=None, a=None):
+    
+    p = {
+        "username":u,
+        "age":a,
+    }
+
+    return render(request, "greet2.html")
